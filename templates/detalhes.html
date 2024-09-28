@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <h1>Detalhes do Produto</h1>
+    <h2>{{ produto.nome }}</h2>
+    <p><strong>Descrição:</strong> {{ produto.descricao }}</p>
+    <p><strong>Valor:</strong> R$ {{ produto.valor }}</p>
+    <p><strong>Disponível para Venda:</strong> {{ 'Sim' if produto.disponivel else 'Não' }}</p>
+    <a href="{{ url_for('index') }}">Voltar para a Listagem</a>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from models import db, Produto
+from models.models import db, Produto
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///produtos.db"
@@ -33,6 +33,12 @@ def cadastro():
         return redirect(url_for("index"))
 
     return render_template("cadastro.html")
+
+
+@app.route("/produto/<int:produto_id>")
+def detalhes_produto(produto_id: int):
+    produto = Produto.query.get_or_404(produto_id)
+    return render_template("detalhes.html", produto=produto)
 
 
 if __name__ == "__main__":
