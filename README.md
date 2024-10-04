@@ -11,9 +11,9 @@ Projeto feito como parte de um processo avaliativo para vaga de estágio na Oak 
 
 ## Stack utilizada
 
-**Front-end:** HTML, CSS
+**Frontend:** HTML, CSS
 
-**Back-end:** Python, Flask, SQLAlchemy, SQLite, Jinja2
+**Backend:** Python, Flask, SQLAlchemy, SQLite
 
 ## Deploy
 
