@@ -3,13 +3,14 @@ __pycache__/
 *$py.class
 
 .prettierrc
+.ruff_cache
+ruff.toml
 
 pip-log.txt
 pip-delete-this-directory.txt
 
 instance/
 .webassets-cache
-
 
 .env
 .venv

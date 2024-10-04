@@ -25,9 +25,7 @@ def cadastro():
         valor = float(request.form["valor"])
         disponivel = request.form["disponivel"] == "sim"
 
-        novo_produto = Produto(
-            nome=nome, descricao=descricao, valor=valor, disponivel=disponivel
-        )
+        novo_produto = Produto(nome=nome, descricao=descricao, valor=valor, disponivel=disponivel)
         db.session.add(novo_produto)
         db.session.commit()
         return redirect(url_for("index"))
@@ -39,6 +37,11 @@ def cadastro():
 def detalhes_produto(produto_id: int):
     produto = Produto.query.get_or_404(produto_id)
     return render_template("detalhes.html", produto=produto)
+
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
