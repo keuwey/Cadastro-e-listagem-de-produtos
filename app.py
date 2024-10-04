@@ -39,10 +39,5 @@ def detalhes_produto(produto_id: int):
     return render_template("detalhes.html", produto=produto)
 
 
-@app.route("/login")
-def login():
-    return render_template("login.html")
-
-
 if __name__ == "__main__":
     app.run(debug=True)
