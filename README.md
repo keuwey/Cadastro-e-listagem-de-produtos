@@ -15,6 +15,10 @@ Projeto feito como parte de um processo avaliativo para vaga de estágio na Oak 
 
 **Back-end:** Python, Flask, SQLAlchemy, SQLite, Jinja2
 
+## Deploy
+
+[Confira aqui](https://cadastro-e-listagem-de-produtos.onrender.com/) o deploy dessa aplicação.
+
 ## Melhorias
 
 - Modo escuro
