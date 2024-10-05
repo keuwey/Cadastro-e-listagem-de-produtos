@@ -12,6 +12,6 @@
     <p><strong>Descrição:</strong> {{ produto.descricao }}</p>
     <p><strong>Valor:</strong> R$ {{ produto.valor }}</p>
     <p><strong>Disponível para Venda:</strong> {{ 'Sim' if produto.disponivel else 'Não' }}</p>
-    <a href="{{ url_for('index') }}">Voltar para a Listagem</a>
+    <button id="back_to_list"><a href="{{ url_for('index') }}">Voltar para a Listagem</a></button>
   </body>
 </html>

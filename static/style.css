@@ -60,6 +60,7 @@ select {
 }
 
 button {
+  margin-top: 15px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -70,6 +71,44 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px 20px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button a {
+  color: white;
+  text-decoration: none;
+}
+
+#back_to_list {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#back_to_list:hover {
+  background-color: #0056b3;
+}
+
+#back_to_list a {
+  color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
@@ -85,5 +124,9 @@ button:hover {
 
   button {
     width: 100%;
+  }
+
+  .back-button {
+    width: 90%;
   }
 }
