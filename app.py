@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for
-from models.models import db, Produto
+from flask import Flask, redirect, render_template, request, url_for
+
+from models.models import Produto, db
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///produtos.db"
@@ -25,7 +26,9 @@ def cadastro():
         valor = float(request.form["valor"])
         disponivel = request.form["disponivel"] == "sim"
 
-        novo_produto = Produto(nome=nome, descricao=descricao, valor=valor, disponivel=disponivel)
+        novo_produto = Produto(
+            nome=nome, descricao=descricao, valor=valor, disponivel=disponivel
+        )
         db.session.add(novo_produto)
         db.session.commit()
         return redirect(url_for("index"))
@@ -37,6 +40,11 @@ def cadastro():
 def detalhes_produto(produto_id: int):
     produto = Produto.query.get_or_404(produto_id)
     return render_template("detalhes.html", produto=produto)
+
+
+@app.route("/health", methods=["GET"])
+def health():
+    return Response("{'status':'ok'}", status=200, mimetype="application/json")
 
 
 if __name__ == "__main__":
